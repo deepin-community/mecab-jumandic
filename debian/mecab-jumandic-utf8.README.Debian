@@ -1,0 +1,10 @@
+mecab-jumandic-utf8 for Debian
+------------------------------
+
+This package provides Juman dictionary compiled for Mecab.
+
+Two dictionary packages for Mecab are available: `mecab-jumandic' and
+`mecab-ipadic'.  To select a dictionary, (a) edit /etc/mecabrc, or
+(b) execute the command `update-alternatives --config mecab-dictionary'.
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>, Fri,  1 Feb 2008 13:17:57 +0900

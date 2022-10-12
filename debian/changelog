@@ -1,0 +1,140 @@
+mecab-jumandic (7.0-20130310-7) unstable; urgency=medium
+
+  * debian/control
+    - revert maintainer mail address
+    - set Standards-Version: 4.2.1
+    - use "Build-Depends: debhelper-compat", instead of debian/compat
+  * debian/compat
+    - drop it
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 02 Dec 2018 21:56:14 +0900
+
+mecab-jumandic (7.0-20130310-6) unstable; urgency=medium
+
+  * debian/control
+    - fix email address
+    - add uploader
+    - set Standards-Version: 4.1.5
+
+ -- NOKUBI Takatsugu <knok@daionet.gr.jp>  Tue, 24 Jul 2018 16:46:30 +0900
+
+mecab-jumandic (7.0-20130310-5) unstable; urgency=medium
+
+  [ NOKUBI Takatsugu ]
+  * debian/control: replace comma to dash
+
+  [ Hideki Yamane ]
+  * dh11
+  * debian/control
+    - update Maintainer: use <team+pkg-nlp-ja@tracker.debian.org> 
+    - set Standards-Version: 4.1.4
+    - update Vcs-*
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 20 May 2018 13:42:51 +0900
+
+mecab-jumandic (7.0-20130310-4) unstable; urgency=medium
+
+  * debian/control
+    - Standards-Version: 4.1.1
+    - set Priority: s/extra/optional/
+  * drop NEWS.Debian since it was unnecessary anymore (10 years ago...)
+  * debian/copyright
+    - convert to copyright format 1.0
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 28 Oct 2017 16:52:09 +0900
+
+mecab-jumandic (7.0-20130310-3) unstable; urgency=medium
+
+  * debian/rules
+    - specify dictdir (Closes: #867689)
+  * debian/mecab-jumandic-utf8.postinst
+    - fix src directory
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 10 Jul 2017 20:48:28 +0900
+
+mecab-jumandic (7.0-20130310-2) unstable; urgency=medium
+
+  * debian/mecab-jumandic-utf8.postinst
+    - fix regression (Closes: #867173)
+  * debian/control
+    - Now we provide only mecab-jumandic-utf8, so package description is
+      obvious (Closes: #535189)
+    - add Provides: mecab-jumandic
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 07 Jul 2017 23:00:10 +0900
+
+mecab-jumandic (7.0-20130310-1) unstable; urgency=medium
+
+  * New upstream release
+  * add debian/source/format as 3.0 (quilt) 
+  * debian/control
+    - set Vcs-* and Homepage
+    - Upstream now provides utf8 data only, so make mecab-jumandic as
+      a transitional package
+       + adjust Depends and add Conflicts
+       + set mecab-jumandic as oldlibs
+    - add Build-Depends: libmecab-dev, mecab-utils,
+    - set Standards-Version: 4.0.0
+  * drop debian/mecab-jumandic.* and update debian/mecab-jumandic-utf8.*
+  * debian/rules
+    - use dh10 and simplify it
+    - exec configure and build
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 01 Jul 2017 10:45:51 +0900
+
+mecab-jumandic (5.1+20070304-4) unstable; urgency=medium
+
+  * debian/compat
+    - set 9 (Closes: #817577)
+  * debian/control
+    - set Build-Depends: debhelper >= 9 
+    - set Standards-Version: 3.9.8
+    - maintainer: pkg-nlp-ja-devel@lists.alioth.debian.org
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 21 Jun 2016 20:35:41 +0900
+
+mecab-jumandic (5.1+20070304-3) unstable; urgency=low
+
+  * Create `mecab-jumandic-utf8' package for morphological analysis in UTF-8.
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>  Fri, 01 Feb 2008 13:10:20 +0900
+  
+mecab-jumandic (5.1+20070304-2) unstable; urgency=low
+
+  * Fix the documentation bug to use UTF-8 dictionary.
+  * Fix the packaging bug which fails removing this package (closes: #455128).
+  * Fix the packaging bug which fails rebuilding this package (closes: #424569).
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>  Tue, 15 Jan 2008 22:12:42 +0900
+  
+mecab-jumandic (5.1+20070304-1) unstable; urgency=low
+
+  * New upstream.
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>  Sun, 25 Mar 2007 19:19:22 +0900
+  
+mecab-jumandic (5.1+20051121-1) unstable; urgency=low
+
+  * New upstream.
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>  Sat, 07 Oct 2006 17:02:24 +0900
+  
+mecab-jumandic (4.0+0.77-1) unstable; urgency=low
+
+  * Reversioning to override an obsolete package installed with mecab-0.76.
+  * debian/preinst: Remove an alternative provided by the obsolete package.
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>  Thu, 19 Feb 2004 00:09:29 +0900
+
+mecab-jumandic (4.0-2) unstable; urgency=low
+
+  * Use juman2mecab.pl which is distributed with
+  http://cl.aist-nara.ac.jp/~taku-ku/software/mecab/dic/juman/mecab-juman4.0-dic-0.03.tar.gz.
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>  Thu, 05 Feb 2004 13:39:48 +0900
+
+mecab-jumandic (4.0-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- TSUCHIYA Masatoshi <tsuchiya@namazu.org>  Fri, 05 Dec 2003 01:29:04 +0900

@@ -1,0 +1,3 @@
+*.def	usr/share/mecab/dic/juman/
+*.csv	usr/share/mecab/dic/juman/
+dicrc	usr/share/mecab/dic/juman/

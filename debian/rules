@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+# -*- Makefile -*-
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-dicdir=/var/lib/mecab/dic/juman-utf8
+
+override_dh_auto_install:
+	dh_auto_install
+	find $(CURDIR)/debian/ -name 'matirx.def' -delete

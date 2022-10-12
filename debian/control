@@ -1,0 +1,36 @@
+Source: mecab-jumandic
+Section: misc
+Priority: optional
+Maintainer: Natural Language Processing (Japanese) <team+pkg-nlp-ja@tracker.debian.org>
+Uploaders: TSUCHIYA Masatoshi <tsuchiya@namazu.org>,
+           Hideki Yamane <henrich@debian.org>,
+	   NOKUBI Takatsugu <knok@daionet.gr.jp>,
+Build-Depends: debhelper (>= 11),
+               debhelper-compat (= 11),
+               libmecab-dev,
+               mecab-utils,
+Standards-Version: 4.2.1
+Vcs-Git: https://salsa.debian.org/nlp-ja-team/mecab-jumandic.git
+Vcs-Browser: https://salsa.debian.org/nlp-ja-team/mecab-jumandic
+Homepage: http://taku910.github.io/mecab/
+
+Package: mecab-jumandic
+Section: oldlibs
+Architecture: all
+Depends: mecab-jumandic-utf8, ${misc:Depends}
+Description: Juman dictionary compiled for Mecab (deprecated)
+ This package provides Juman dictionary converted for Mecab, that is a
+ Japanese morphological analysis system.  This dictionary is written
+ in Masuoka-Takubo grammar system.
+ .
+ This is a transitional package. You can safely remove it.
+
+Package: mecab-jumandic-utf8
+Architecture: all
+Depends: mecab-utils (>= 0.93), ${misc:Depends}
+Conflicts: mecab-jumandic (<< 7.0-20130310-1)
+Provides: mecab-jumandic
+Description: Juman dictionary encoded in UTF-8 compiled for Mecab
+ This package provides Juman dictionary converted for Mecab, that is a
+ Japanese morphological analysis system.  This dictionary is written
+ in Masuoka-Takubo grammar system.
